@@ -1,0 +1,13 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Cyiwdio'
+theme = "not-much"
+
+[params]
+theme = "dark"
+palette = "default"
+
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[markup]
+  goldmark = { unsafe = true }
