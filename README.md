@@ -16,7 +16,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 This project uses the not-much Hugo theme. You can explore and use other themes as well to customize your experience!
 
 
-❤️ Made with Love from Bangladesh 🇧🇩
+### Made with ❤️ from  🇧🇩
 
 Thank you for checking out Radio CyIWDio! Enjoy the music! 🎶
 please reach out to us at syed.sakibul.islam2008@gmail.com
