@@ -19,7 +19,7 @@ ignoreLogs = ['warning-goldmark-raw-html']
   url = "/"
 
 [[menu.main]]
-  identifier = "Github"
-  name = "Github"
-  title = "GitHub"
-  url = "https://github.com/Cyniez"
+  identifier = "Credits"
+  name = "Credits"
+  title = "Credits"
+  url = "/credit"
