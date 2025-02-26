@@ -18,8 +18,3 @@ ignoreLogs = ['warning-goldmark-raw-html']
   title = "Radio"
   url = "/"
 
-[[menu.main]]
-  identifier = "Credits"
-  name = "Credits"
-  title = "Credits"
-  url = "/credit"

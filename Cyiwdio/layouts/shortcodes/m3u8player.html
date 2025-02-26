@@ -1,8 +1,29 @@
 <!-- layouts/shortcodes/m3u8player.html -->
-<audio id="my-audio" class="video-js vjs-default-skin" controls preload="auto" width="640" height="50" data-setup='{}'>
+<audio id="my-audio" controls preload="auto" width="640" height="50">
   <source src="{{ .Get "src" }}" type="application/x-mpegURL">
   <p class="vjs-no-js">
     To listen to this audio, please enable JavaScript, and consider upgrading to a web browser that
     <a href="https://videojs.com/html5-audio-support/" target="_blank">supports HTML5 audio</a>
   </p>
 </audio>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+  const audio = document.getElementById('my-audio');
+  const audioSrc = "{{ .Get "src" }}"; // Get the source URL from the shortcode
+
+  if (Hls.isSupported()) {
+    const hls = new Hls();
+    hls.loadSource(audioSrc);
+    hls.attachMedia(audio);
+    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+      audio.play();
+    });
+  } else if (audio.canPlayType('application/vnd.apple.mpegurl')) {
+    // This is for Safari and iOS devices
+    audio.src = audioSrc;
+    audio.addEventListener('loadedmetadata', function () {
+      audio.play();
+    });
+  }
+</script>
