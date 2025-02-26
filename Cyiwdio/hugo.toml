@@ -5,9 +5,21 @@ theme = "not-much"
 
 [params]
 theme = "dark"
-palette = "default"
+palette = "catpuccin"
 
 ignoreLogs = ['warning-goldmark-raw-html']
 
 [markup]
   goldmark = { unsafe = true }
+
+[[menu.main]]
+  identifier = "Radio"
+  name = "Radio"
+  title = "Radio"
+  url = "/"
+
+[[menu.main]]
+  identifier = "Github"
+  name = "Github"
+  title = "GitHub"
+  url = "https://github.com/Cyniez"
